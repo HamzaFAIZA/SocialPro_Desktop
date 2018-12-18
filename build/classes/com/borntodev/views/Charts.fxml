@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="517.0" prefWidth="653.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.borntodev.controller.ChartsController">
+    <stylesheets>
+        <URL value="@/com/borntodev/views/css/charts.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane fx:id="AnchorPane1" layoutX="27.0" layoutY="14.0" prefHeight="175.0" prefWidth="283.0" />
+   </children>
+</AnchorPane>

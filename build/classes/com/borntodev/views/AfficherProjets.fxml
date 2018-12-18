@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="AnchorPane1" prefHeight="678.0" prefWidth="758.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.borntodev.controller.AfficherProjetsController">
+    <stylesheets>
+        <URL value="@/com/borntodev/views/css/afficherprojets.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tableProjet" layoutX="14.0" layoutY="11.0" prefHeight="189.0" prefWidth="229.0" />
+      <AnchorPane fx:id="AnchorPaneDesc" layoutX="349.0" prefHeight="410.0" prefWidth="334.0">
+         <children>
+            <Label layoutX="14.0" layoutY="37.0" text="Intitulé  :" />
+            <Label layoutX="14.0" layoutY="67.0" text="Description :" />
+            <Label layoutX="14.0" layoutY="99.0" text="Date de début :" />
+            <Label layoutX="14.0" layoutY="295.0" text="Coût investissement éstimé :" />
+            <Label layoutX="14.0" layoutY="264.0" text="Gain :" />
+            <Label layoutX="14.0" layoutY="229.0" text="gain éstimé :" />
+            <Label layoutX="14.0" layoutY="198.0" text="Statut :" />
+            <Label layoutX="14.0" layoutY="167.0" text="Date de fin :" />
+            <Label layoutX="14.0" layoutY="133.0" text="Date de fin éstimée :" />
+            <Label layoutX="14.0" layoutY="326.0" text="Coût investissement :" />
+            <Label layoutX="72.0" layoutY="6.0" text="Description" />
+            <Label fx:id="coutInv" layoutX="147.0" layoutY="326.0" />
+            <Label fx:id="datefines" layoutX="145.0" layoutY="133.0" />
+            <Label fx:id="datefin" layoutX="103.0" layoutY="167.0" />
+            <Label fx:id="stat" layoutX="77.0" layoutY="198.0" />
+            <Label fx:id="gainest" layoutX="107.0" layoutY="229.0" />
+            <Label fx:id="gain" layoutX="64.0" layoutY="264.0" />
+            <Label fx:id="coutInvest" layoutX="184.0" layoutY="295.0" />
+            <Label fx:id="datedeb" layoutX="119.0" layoutY="99.0" />
+            <Label fx:id="desc" layoutX="101.0" layoutY="67.0" />
+            <Label fx:id="nom" layoutX="77.0" layoutY="37.0" />
+            <TextField fx:id="txtnom" layoutX="91.0" layoutY="33.0" />
+            <TextField fx:id="txtdesc" layoutX="110.0" layoutY="63.0" />
+            <TextField fx:id="txtgainest" layoutX="110.0" layoutY="225.0" />
+            <TextField fx:id="txtgain" layoutX="71.0" layoutY="260.0" />
+            <TextField fx:id="txtcoutest" layoutX="185.0" layoutY="291.0" />
+            <TextField fx:id="txtcout" layoutX="155.0" layoutY="322.0" />
+            <ComboBox fx:id="cmbStat" layoutX="80.0" layoutY="193.0" prefWidth="150.0" />
+            <DatePicker fx:id="calDateDeb" layoutX="119.0" layoutY="95.0" />
+            <DatePicker fx:id="calDateFinEst" layoutX="143.0" layoutY="129.0" />
+            <DatePicker fx:id="calDateFin" layoutX="107.0" layoutY="163.0" />
+            <Button fx:id="btnValider" layoutX="273.0" layoutY="16.0" mnemonicParsing="false" text="Valider" />
+            <Button fx:id="btnEnreg" layoutX="267.0" layoutY="358.0" mnemonicParsing="false" text="Enregistrer" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnModif" layoutX="401.0" layoutY="431.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Modifier" />
+      <Button fx:id="btnSupp" layoutX="505.0" layoutY="431.0" mnemonicParsing="false" text="Supprimer" />
+      <Button fx:id="btnAjout" layoutX="323.0" layoutY="431.0" mnemonicParsing="false" text="Nouveau" />
+      <Button fx:id="btnAffecter" layoutX="603.0" layoutY="431.0" mnemonicParsing="false" text="Affecter équipe" />
+      <Button fx:id="btnCompetence" layoutX="165.0" layoutY="431.0" mnemonicParsing="false" text="Ajouter competence" />
+      <AnchorPane fx:id="AnchorPaneAffect" layoutX="14.0" layoutY="222.0" prefHeight="300.0" prefWidth="284.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Intitulé :" />
+            <Label fx:id="txtIntituléAffect" layoutX="79.0" layoutY="14.0" />
+            <Label layoutX="14.0" layoutY="44.0" text="Nom de l'employé :" />
+            <ComboBox fx:id="cmbEmp" layoutX="134.0" layoutY="40.0" prefWidth="150.0" />
+            <Button fx:id="btnAff" layoutX="10.0" layoutY="83.0" mnemonicParsing="false" text="Affecter" />
+            <TableView fx:id="tableUsers" layoutX="169.0" layoutY="100.0" prefHeight="89.0" prefWidth="200.0" />
+            <Button fx:id="btnSuppUser" layoutX="173.0" layoutY="197.0" mnemonicParsing="false" text="Détacher de la liste" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AnchorPaneCompetence" layoutX="-10.0" layoutY="298.0" prefHeight="291.0" prefWidth="250.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Intitulé :" />
+            <Label fx:id="lblIntituléComp" layoutX="72.0" layoutY="14.0" />
+            <Label layoutX="14.0" layoutY="52.0" text="Compétence :" />
+            <ComboBox fx:id="cmbComp" layoutX="100.0" layoutY="48.0" prefWidth="150.0" />
+            <Button fx:id="btnComp" layoutX="14.0" layoutY="118.0" mnemonicParsing="false" text="Ajouter à la liste" />
+            <TableView fx:id="tableCompetence" layoutX="175.0" layoutY="97.0" prefHeight="114.0" prefWidth="200.0" />
+            <Button fx:id="btnSuppComp" layoutX="175.0" layoutY="219.0" mnemonicParsing="false" text="Détacher" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AnchorPaneStauts" layoutX="68.0" layoutY="575.0" prefHeight="89.0" prefWidth="626.0">
+         <children>
+            <Label fx:id="lblEnAttente" layoutX="14.0" layoutY="22.0" text="En attente :  " />
+            <Label fx:id="lblEnCours" layoutX="118.0" layoutY="22.0" text="En cours : " />
+            <Label fx:id="lblEnRepos" layoutX="225.0" layoutY="22.0" text="En repos : " />
+            <Label fx:id="lblTerminé" layoutX="324.0" layoutY="22.0" text="Terminé : " />
+            <Label fx:id="lblValide" layoutX="425.0" layoutY="22.0" text="Validé et payé : " />
+            <Label fx:id="lblEchec" layoutX="562.0" layoutY="22.0" text="Echec : " />
+            <Label fx:id="lblaux" layoutX="81.0" layoutY="22.0" prefHeight="17.0" prefWidth="19.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
